@@ -21,6 +21,7 @@
 class CubicEase : public EasingBase
 {
 public:
+	using EasingBase::EasingBase; // inherit base class constructors
 	// Starts the motion by backtracking, then reversing
 	// direction and moving toward the target
 	virtual NUMBER easeIn(NUMBER time_) const;

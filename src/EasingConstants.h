@@ -14,6 +14,7 @@
 // the number type used in this library
 
 typedef double NUMBER;
+enum easingType_t {EASE_IN, EASE_OUT, EASE_IN_OUT};
 
 
 #endif

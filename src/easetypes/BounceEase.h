@@ -20,6 +20,7 @@
 class BounceEase : public EasingBase
 {
 public:
+	using EasingBase::EasingBase; // inherit base class constructors
 	// starts the bounce motion slowly,
   // then accelerates motion as it executes
 	virtual NUMBER easeIn(NUMBER time_) const;

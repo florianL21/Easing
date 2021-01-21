@@ -20,10 +20,23 @@ class EasingBase
 protected:
 	NUMBER _change;
 	NUMBER _duration;
+	easingType_t _type;
 
 public:
+
 	// default constructor
 	EasingBase();
+
+	EasingBase(easingType_t type_);
+
+	//virtual destructor to make proper deletion possible
+	virtual ~EasingBase();
+
+	// single method to set the type for all easings
+	void setType(easingType_t type_);
+
+	// single method for all easings to execute
+	NUMBER ease(NUMBER time_) const;
 
 	// easing API methods
 	virtual NUMBER easeIn(NUMBER time_) const=0;

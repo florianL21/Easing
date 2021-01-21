@@ -27,6 +27,7 @@ private:
 public:
 	// constructor - sets a default value for the overshoot
 	ElasticEase();
+	ElasticEase(easingType_t type_, NUMBER period_, NUMBER amplitude_);
 
 	// Starts motion slowly, and then accelerates motion as it executes.
 	virtual NUMBER easeIn(NUMBER time_) const;

@@ -21,6 +21,7 @@
 class QuadraticEase : public EasingBase
 {
 public:
+	using EasingBase::EasingBase; // inherit base class constructors
 	// starts motion from a zero velocity, and then accelerates
 	// motion as it executes.
 	virtual NUMBER easeIn(NUMBER time_) const;

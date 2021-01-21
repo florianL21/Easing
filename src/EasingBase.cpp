@@ -15,7 +15,43 @@
 
 EasingBase::EasingBase()
 {
-	_change=0;
+	_change = 0;
+	_type = EASE_IN;
+}
+
+EasingBase::EasingBase(easingType_t type_)
+{
+	_change = 0;
+	_type = type_;
+}
+
+EasingBase::~EasingBase()
+{
+
+}
+
+void EasingBase::setType(easingType_t type_)
+{
+	_type = type_;
+}
+
+NUMBER EasingBase::ease(NUMBER time_) const
+{
+	switch (_type)
+	{
+	case EASE_IN:
+		return easeIn(time_);
+		break;
+	case EASE_OUT:
+		return easeOut(time_);
+		break;
+	case EASE_IN_OUT:
+		return easeInOut(time_);
+		break;
+	default:
+		return 0;
+		break;
+	}
 }
 
 

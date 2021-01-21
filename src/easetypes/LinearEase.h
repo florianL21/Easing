@@ -20,6 +20,7 @@
 class LinearEase : public EasingBase
 {
 public:
+	using EasingBase::EasingBase; // inherit base class constructors
 	// no acceleration
 	virtual NUMBER easeIn(NUMBER time_) const;
 

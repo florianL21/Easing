@@ -20,6 +20,7 @@
 class CircularEase : public EasingBase
 {
 public:
+	using EasingBase::EasingBase; // inherit base class constructors
 	// starts motion slowly, and then accelerates
 	// motion as it executes
 	virtual NUMBER easeIn(NUMBER time_) const;

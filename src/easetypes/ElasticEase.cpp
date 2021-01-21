@@ -22,6 +22,14 @@ ElasticEase::ElasticEase()
 	_amplitude=_period=0;
 }
 
+ElasticEase::ElasticEase(easingType_t type_, NUMBER period_, NUMBER amplitude_) : EasingBase(type_)
+{
+// set amplitude and period to zero to trigger use of defaults
+
+	_amplitude = amplitude_;
+	_period = period_;
+}
+
 
 /*
  * Ease in
