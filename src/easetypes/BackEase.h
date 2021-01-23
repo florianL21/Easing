@@ -26,6 +26,8 @@ public:
 	// constructor - sets a default value for the overshoot
 	BackEase();
 
+	BackEase(easingType_t type_, NUMBER overshoot_);
+
 	// Starts the motion by backtracking, then reversing
 	// direction and moving toward the target
 	virtual NUMBER easeIn(NUMBER time_) const;

@@ -20,6 +20,11 @@ BackEase::BackEase()
 	_overshoot=1.70158;
 }
 
+BackEase::BackEase(easingType_t type_, NUMBER overshoot_) : EasingBase(type_)
+{
+	_overshoot=overshoot_;
+}
+
 
 /*
  * Set the overshoot value
